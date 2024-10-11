@@ -1,0 +1,362 @@
+body {
+    font-family: "Open Sans", sans-serif;
+    margin: 0;
+    position: relative;
+    z-index: 0;
+    font-weight: 500;
+}
+
+.header_menu {
+    height: 6.5vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-bottom: 1px solid #e6e6e6;
+    padding: 13px 0;
+    margin: 0;
+}
+
+.logo_wrap {
+    display: flex;
+    width: 35%;
+    height: 99.5%;
+    padding: 0.25rem;
+    cursor: pointer;
+}
+
+.logo {
+    height: 100%;
+    width: auto;
+}
+
+.dropdown_menu {
+    list-style-type: none;
+    padding: 0;
+    margin-right: 0;
+    width: auto;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.main_item {
+    flex-wrap: nowrap;
+    position: relative;
+    display: inline-block;
+    padding: 8 1.5px;
+    margin: 0;
+    z-index: 50;
+}
+
+.menu_txt {
+    flex-wrap: nowrap;
+    display: block;
+    padding: 10px 32px 8px 8px;
+    text-decoration: none;
+    color: #111;
+    font-size: .95rem;
+    font-weight: bold;
+    margin: 0;
+    position: relative;
+    letter-spacing: 0.25px;
+    white-space: nowrap;
+}
+
+.menu_txt::after {
+    content: '›';
+    position: absolute;
+    right: 20px;
+    transform: rotate(90deg);
+    font-size: 1rem;
+    color: #111;
+    font-weight: 300;
+}
+
+.sub_txt {
+    display: block;
+    padding: 8px 48px 6px 16px;
+    margin: 0;
+    text-decoration: none;
+    font-size: 16px;
+    position: relative;
+    z-index: 100;
+    white-space: nowrap;
+}
+
+#DEVELOPMENT_tools {
+    display: block;
+    padding: 8px 48px 6px 16px;
+    margin: 0;
+    text-decoration: none;
+    font-size: 12.8px;
+    position: relative;
+    z-index: 100;
+    white-space: nowrap;
+}
+
+.inline_svg {
+    display: inline;
+    height: 1rem;
+    width: auto;
+}
+
+#special_p {
+    display: inline;
+    padding-right: 8px;
+}
+
+.path_for_inline_svg {
+    fill: #111;
+}
+
+.text_and_svg:hover {
+    cursor: pointer;
+}
+
+.text_and_svg:hover .path_for_inline_svg {
+    fill: #6CB52D;
+}
+
+.link_span {
+    color: blue;
+}
+
+.link_span:hover {
+    cursor: pointer;
+    color: #6CB52D;
+}
+
+.sub_txt:hover {
+    color: #6CB52D;
+}
+
+.submenu {
+    border-radius: 6px;
+    box-shadow: 0 5px 30px 0 rgba(108, 135, 135, .5);
+    display: none;
+    position: absolute;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    padding: 16px;
+    z-index: 100;
+    width: 210px;
+    background-color: white;
+}
+
+.main_item:hover .submenu {
+    display: block;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 0 15px;
+}
+
+.hamburger div {
+    width: 23px;
+    height: 3px;
+    background-color: #333;
+    margin: 2px 0;
+}
+
+.description_box {
+    width: 80vw;
+    margin-left: 7%;
+    padding: 85px 0 40px 0;
+    position: relative;
+}
+
+.description_header {
+    font-size: 3.5rem;
+    font-weight: bolder;
+    margin: 0;
+    font-family: "Metropolis", sans-serif;
+}
+
+.decription {
+    font-size: 24px;
+    letter-spacing: 1px;
+    font-weight: 300;
+    color: #2c2c2c;
+    max-width: 960px;
+    line-height: 1.5;
+}
+
+.card_container {
+    background-color: #EBF2F2;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.card_row {
+    width: 70vw;
+    margin-left: 15%;
+    margin-top: 2%;
+    justify-content: space-evenly;
+    display: flex;
+}
+
+.card {
+    width: 32vw;
+    height: auto;
+    background-color: white;
+    padding: 35px 10px;
+    min-height: 15vh;
+    border: 1px solid #daeddc;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card:hover {
+    top: -4px;
+    transform: translateY(-4px);
+    box-shadow: 0px 8px 15px 4px rgba(52, 60, 55, 0.1);
+    transition: 0.3s;
+}
+
+.img_container_card {
+    width: 22.5%;
+    height: auto;
+    display: inline-block;
+    padding-left: 0.5vw;
+}
+
+.card_image {
+    width: auto;
+    height: auto;
+}
+
+.text_container_card {
+    display: inline-block;
+    width: 70%;
+}
+
+.header_card {
+    display: block;
+    font-size: 24px;
+    font-family: "Metropolis", sans-serif;
+    margin: 0;
+}
+
+.text_card {
+    display: block;
+    font-size: 16px;
+    line-height: 1.6;
+    letter-spacing: 0.25px;
+    font-weight: 200;
+}
+
+@media (max-width: 1200px) {
+    .header_menu {
+        justify-content: center;
+    }
+    .logo_wrap {
+        width: fit-content;
+        margin: 0;
+    }
+    .dropdown_menu {
+        width: fit-content;
+        margin: 0;
+    }
+}
+
+@media (max-width: 1020px) {
+    .main_item {
+        display: none;
+    }
+    .hamburger {
+        display: flex;
+    }
+    .logo_wrap {
+        width: fit-content;
+        padding: 1%;
+        margin: 0;
+        height: 31px;
+    }
+    .header_menu {
+        height: 4vh;
+        justify-content: space-between;
+    }
+    .description_box {
+        margin-left: 25px;
+        width: 95%;
+    }
+    .decription {
+        width: 95%;
+        font-size: 20.8px;
+        line-height: 1.7;
+    }
+    .card_row {
+        width: 75%;
+        margin-left: 12.5%;
+        justify-content: space-between;
+    }
+    .card {
+        width: 44%;
+        padding-top: 0px;
+        height: auto;
+        display: inline-block;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .img_container_card{
+        width: auto;
+        margin: 0;
+        padding-top: 10px;
+        height: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center ;
+    }
+    .card_image {
+        width: 120px;
+        height: 120px;
+    }
+    .text_container_card {
+        width: 95%;
+        height: 50%;
+        margin: 0;
+        display: block;
+        padding-left: 2.5%;
+        padding-bottom: 60px;
+    }
+}
+
+@media (max-width: 800px){
+    .card_row {
+        flex-direction: column;
+        width: 100%;
+        margin-left: 0;
+    }
+    .card {
+        display: block;
+        width: 70%;
+        margin-left: 15%;
+        margin-top: 3%;
+        padding-bottom: 20px;
+    }
+    .img_container_card{
+        width: 90%;
+        margin: 0;
+        padding-top: 30px;
+        padding-left: 5%;
+        height: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center ;
+    }
+    .text_container_card {
+        width: 90%;
+        height: 50%;
+        margin: 0;
+        display: block;
+        padding-left: 5%;
+        padding-top: 20px;
+        padding-bottom: 0px;
+    }
+}
