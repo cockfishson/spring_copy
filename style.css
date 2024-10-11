@@ -175,6 +175,10 @@ body {
     font-family: "Metropolis", sans-serif;
 }
 
+.view_all_sub{
+    padding-bottom: 20px;
+}
+
 .decription {
     font-size: 24px;
     letter-spacing: 1px;
