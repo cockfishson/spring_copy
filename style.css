@@ -175,7 +175,7 @@ body {
     font-family: "Metropolis", sans-serif;
 }
 
-.view_all_sub{
+.view_all_sub {
     padding-bottom: 20px;
 }
 
@@ -258,10 +258,12 @@ body {
     .header_menu {
         justify-content: center;
     }
+
     .logo_wrap {
         width: fit-content;
         margin: 0;
     }
+
     .dropdown_menu {
         width: fit-content;
         margin: 0;
@@ -272,33 +274,40 @@ body {
     .main_item {
         display: none;
     }
+
     .hamburger {
         display: flex;
     }
+
     .logo_wrap {
         width: fit-content;
         padding: 1%;
         margin: 0;
         height: 31px;
     }
+
     .header_menu {
         height: 4vh;
         justify-content: space-between;
     }
+
     .description_box {
         margin-left: 25px;
         width: 95%;
     }
+
     .decription {
         width: 95%;
         font-size: 20.8px;
         line-height: 1.7;
     }
+
     .card_row {
         width: 75%;
         margin-left: 12.5%;
         justify-content: space-between;
     }
+
     .card {
         width: 44%;
         padding-top: 0px;
@@ -308,19 +317,22 @@ body {
         align-items: center;
         justify-content: center;
     }
-    .img_container_card{
+
+    .img_container_card {
         width: auto;
         margin: 0;
         padding-top: 10px;
         height: 50%;
         display: flex;
         justify-content: center;
-        align-items: center ;
+        align-items: center;
     }
+
     .card_image {
         width: 120px;
         height: 120px;
     }
+
     .text_container_card {
         width: 95%;
         height: 50%;
@@ -331,12 +343,13 @@ body {
     }
 }
 
-@media (max-width: 800px){
+@media (max-width: 800px) {
     .card_row {
         flex-direction: column;
         width: 100%;
         margin-left: 0;
     }
+
     .card {
         display: block;
         width: 70%;
@@ -344,7 +357,8 @@ body {
         margin-top: 3%;
         padding-bottom: 20px;
     }
-    .img_container_card{
+
+    .img_container_card {
         width: 90%;
         margin: 0;
         padding-top: 30px;
@@ -352,8 +366,9 @@ body {
         height: 50%;
         display: flex;
         justify-content: center;
-        align-items: center ;
+        align-items: center;
     }
+
     .text_container_card {
         width: 90%;
         height: 50%;
