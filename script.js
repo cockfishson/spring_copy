@@ -72,7 +72,7 @@ function Render_nav_bar(element_name) {
 
 let isBurgerOpen = false;
 
-function toggleBurgerMenu() {
+window.toggleBurgerMenu = function () {
   const sidebar_menu = document.getElementById("sidebar_menu");
   const hamburger = document.getElementById("hamburger");
 
@@ -86,7 +86,7 @@ function toggleBurgerMenu() {
     hamburger.style.right = "0";
     isBurgerOpen = true;
   }
-}
+};
 
 function Render_nav_side(element_name) {
   const dropdown_container = document.getElementById(element_name);
