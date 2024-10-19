@@ -175,7 +175,7 @@ body {
     font-family: "Metropolis", sans-serif;
 }
 
-.view_all_sub{
+.view_all_sub {
     padding-bottom: 20px;
 }
 
@@ -186,6 +186,23 @@ body {
     color: #2c2c2c;
     max-width: 960px;
     line-height: 1.5;
+}
+
+.search_container {
+    width: 100%;
+    height: 10%;
+    background-color: #EBF2F2;
+    padding-top: 2%;
+    justify-content: center;
+    display: flex;
+}
+
+.search_bar {
+    width: 30%;
+    height: 100%;
+    border-radius: 20px;
+    padding-left: 2%;
+    font-size: 1.25rem;
 }
 
 .card_container {
@@ -254,14 +271,20 @@ body {
     font-weight: 200;
 }
 
+.sidebar_menu {
+    display: none;
+}
+
 @media (max-width: 1200px) {
     .header_menu {
         justify-content: center;
     }
+
     .logo_wrap {
         width: fit-content;
         margin: 0;
     }
+
     .dropdown_menu {
         width: fit-content;
         margin: 0;
@@ -269,36 +292,123 @@ body {
 }
 
 @media (max-width: 1020px) {
-    .main_item {
+    .dropdown_menu {
         display: none;
     }
+
     .hamburger {
         display: flex;
+        z-index: 150;
     }
+
     .logo_wrap {
         width: fit-content;
         padding: 1%;
         margin: 0;
         height: 31px;
     }
+
     .header_menu {
         height: 4vh;
         justify-content: space-between;
     }
+
     .description_box {
         margin-left: 25px;
         width: 95%;
     }
+
     .decription {
         width: 95%;
         font-size: 20.8px;
         line-height: 1.7;
     }
+
     .card_row {
         width: 75%;
         margin-left: 12.5%;
         justify-content: space-between;
     }
+
+    .sidebar_menu {
+        display: none;
+        flex-direction: column;
+        height: 85vh;
+        width: 90vw;
+        position: fixed;
+        background-color: #191E1E;
+        transition: left 0.3s ease;
+        z-index: 100;
+        margin: 0;
+        padding: 7.5vh 5vw 7.5vh 5vw;
+        list-style-type: none;
+        overflow-y: scroll;
+    }
+
+    .menu_txt_side {
+        border-bottom: 1px solid #EBF2F2;
+        padding-bottom: 10px;
+        color: #EBF2F2;
+        font-size: 2rem;
+        font-weight: 500;
+        width: 80%;
+        margin-bottom: 0%;
+    }
+
+    .menu_txt_side:hover {
+        cursor: pointer;
+        color: #6CB52D;
+    }
+
+    .menu_txt_side::after {
+        content: '›';
+        position: absolute;
+        right: 20%;
+        transform: rotate(90deg);
+        transition: transform 0.3s ease;
+        font-size: 2rem;
+        color: #EBF2F2;
+        font-weight: 300;
+    }
+
+    .rotate-180::after {
+        transform: rotate(-90deg);
+    }
+
+    #DEVELOPMENT_tools {
+        color: #98afae;
+        font-size: 1.2rem;
+        padding-left: 0;
+        padding-bottom: 0;
+        padding-top: 2rem;
+    }
+
+    .submenu_side {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: none;
+    }
+
+    .sub_txt_side {
+        color: #98afae;
+        font-size: 1.2rem;
+        padding: 0.5rem 0;
+        margin: 0;
+    }
+
+    .search_container {
+        justify-items: stretch;
+        padding: 0;
+        margin: 0;
+    }
+
+    .search_bar {
+        width: 70vw;
+        border-radius: 20px;
+        margin-left: 3vw;
+    }
+
     .card {
         width: 44%;
         padding-top: 0px;
@@ -308,19 +418,22 @@ body {
         align-items: center;
         justify-content: center;
     }
-    .img_container_card{
+
+    .img_container_card {
         width: auto;
         margin: 0;
         padding-top: 10px;
         height: 50%;
         display: flex;
         justify-content: center;
-        align-items: center ;
+        align-items: center;
     }
+
     .card_image {
         width: 120px;
         height: 120px;
     }
+
     .text_container_card {
         width: 95%;
         height: 50%;
@@ -331,12 +444,14 @@ body {
     }
 }
 
-@media (max-width: 800px){
+@media (max-width: 800px) {
     .card_row {
         flex-direction: column;
         width: 100%;
         margin-left: 0;
+        justify-content: center;
     }
+
     .card {
         display: block;
         width: 70%;
@@ -344,7 +459,8 @@ body {
         margin-top: 3%;
         padding-bottom: 20px;
     }
-    .img_container_card{
+
+    .img_container_card {
         width: 90%;
         margin: 0;
         padding-top: 30px;
@@ -352,8 +468,9 @@ body {
         height: 50%;
         display: flex;
         justify-content: center;
-        align-items: center ;
+        align-items: center;
     }
+
     .text_container_card {
         width: 90%;
         height: 50%;
