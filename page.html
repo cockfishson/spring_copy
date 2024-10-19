@@ -3,9 +3,11 @@
 <head>
     <link rel="stylesheet" href="style.css">
     <title>Stage 2 task</title>
+    <script src="script.js"></script>
 </head>
 
 <body>
+    <ul class="sidebar_menu" id="sidebar_menu"></ul>
     <nav class="header_menu">
         <div class="logo_wrap">
             <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 2674.9 417" class="logo">
@@ -90,157 +92,13 @@
                 </path>
             </svg>
         </div>
-        <ul class="dropdown_menu">
-            <label for="toggle" class="hamburger">
-                <div></div>
-                <div></div>
-                <div></div>
-            </label>
-            <li class="main_item">
-                <p class="menu_txt">Why Spring</p>
-                <ul class="submenu">
-                    <li>
-                        <p class="sub_txt">Overview</p>
-                    </li>
-                    <li>
-                        <p class="sub_txt">Microservices</p>
-                    </li>
-                    <li>
-                        <p class="sub_txt">Reactive</p>
-                    </li>
-                    <li>
-                        <p class="sub_txt">Event Driven</p>
-                    </li>
-                    <li>
-                        <p class="sub_txt">Cloud</p>
-                    </li>
-                    <li>
-                        <p class="sub_txt">Web Applications</p>
-                    </li>
-                    <li>
-                        <p class="sub_txt">Serverless</p>
-                    </li>
-                    <li>
-                        <p class="sub_txt">Batch</p>
-                    </li>
-                </ul>
-            </li>
-            <li class="main_item">
-                <p class="menu_txt">Learn</p>
-                <ul class="submenu">
-                    <li>
-                        <p class="sub_txt">Overview</p>
-                    </li>
-                    <li>
-                        <p class="sub_txt">Quickstart </p>
-                    </li>
-                    <li>
-                        <p class="sub_txt">Guides</p>
-                    </li>
-                    <li>
-                        <p class="sub_txt">Blog </p>
-                    </li>
-                </ul>
-            </li>
-            <li class="main_item">
-                <p class="menu_txt">Projects</p>
-                <ul class="submenu">
-                    <li>
-                        <p class="sub_txt">Overview</p>
-                    </li>
-                    <li>
-                        <p class="sub_txt">Spring Boot</p>
-                    </li>
-                    <li>
-                        <p class="sub_txt">Spring Framework</p>
-                    </li>
-                    <li>
-                        <p class="sub_txt">Spring Cloud</p>
-                    </li>
-                    <li>
-                        <p class="sub_txt">Spring Cloud Data Flow</p>
-                    </li>
-                    <li>
-                        <p class="sub_txt">Spring Data</p>
-                    </li>
-                    <li>
-                        <p class="sub_txt">Spring Integration</p>
-                    </li>
-                    <li>
-                        <p class="sub_txt">Spring Batch</p>
-                    </li>
-                    <li>
-                        <p class="sub_txt">Spring Security</p>
-                    </li>
-                    <li>
-                        <p class="sub_txt">Spring AI</p>
-                    </li>
-                    <li class="view_all_sub">
-                        <p class="sub_txt"><span class="link_span">View all projects</span></p>
-                    </li>
-                    <li>
-                        <p id="DEVELOPMENT_tools">DEVELOPMENT TOOLS</p>
-                    </li>
-                    <li>
-                        <p class="sub_txt">Spring Tools 4</p>
-                    </li>
-                    <li><span class="text_and_svg">
-                            <p class="sub_txt" id="special_p">Spring Initializr</p><svg aria-hidden="true"
-                                focusable="false" data-prefix="fas" data-icon="arrow-up-right-from-square"
-                                class="inline_svg" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                                <path class="path_for_inline_svg" fill="currentColor"
-                                    d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32h82.7L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V32c0-17.7-14.3-32-32-32H320zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z">
-                                </path>
-                            </svg>
-                        </span></li>
-                </ul>
-            </li>
-            <li class="main_item">
-                <p class="menu_txt">Academy</p>
-                <ul class="submenu">
-                    <li>
-                        <p class="sub_txt">Courses</p>
-                    </li>
-                    <li>
-                        <p class="sub_txt">Get Certified</p>
-                    </li>
-                </ul>
-            </li>
-            <li class="main_item">
-                <p class="menu_txt">Solutions</p>
-                <ul class="submenu">
-                    <li>
-                        <p class="sub_txt">Overview</p>
-                    </li>
-                    <li>
-                        <p class="sub_txt">Tanzu Spring</p>
-                    </li>
-                    <li>
-                        <p class="sub_txt">Spring Consulting</p>
-                    </li>
-                    <li>
-                        <p class="sub_txt">Spring Academy For Teams</p>
-                    </li>
-                    <li>
-                        <p class="sub_txt">Security Advisories</p>
-                    </li>
-                </ul>
-            </li>
-            <li class="main_item">
-                <p class="menu_txt">Community</p>
-                <ul class="submenu">
-                    <li>
-                        <p class="sub_txt">Overview</p>
-                    </li>
-                    <li>
-                        <p class="sub_txt">Events</p>
-                    </li>
-                    <li>
-                        <p class="sub_txt">Authors</p>
-                    </li>
-                </ul>
-            </li>
+        <ul class="dropdown_menu" id="dropdown_menu">
         </ul>
+        <label for="toggle" class="hamburger" onclick="toggleBurgerMenu()" id="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </label>
     </nav>
     <div class="description_box">
         <h1 class="description_header">Projects</h1>
@@ -248,73 +106,7 @@
             your application may be, there is a Spring Project to help you build it. Start small and use just what you
             need—Spring is modular by design.</p>
     </div>
-    <div class="card_container">
-        <div class="card_row">
-            <div class="card">
-                <div class="img_container_card">
-                    <img src="./media/spring-boot.svg" class="card_image" />
-                </div>
-                <div class="text_container_card">
-                    <h2 class="header_card">Spring Boot</h2>
-                    <p class="text_card">Takes an opinionated view of building Spring applications and gets you up and
-                        running as quickly as possible.</p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="img_container_card">
-                    <img src="./media/spring-framework.svg" class="card_image" />
-                </div>
-                <div class="text_container_card">
-                    <h2 class="header_card">Spring Framework</h2>
-                    <p class="text_card">Provides core support for dependency injection, transaction management, web
-                        apps, data access, messaging, and more.</p>
-                </div>
-            </div>
-        </div>
-        <div class="card_row">
-            <div class="card">
-                <div class="img_container_card">
-                    <img src="./media/spring-data.svg" class="card_image" />
-                </div>
-                <div class="text_container_card">
-                    <h2 class="header_card">Spring Data</h2>
-                    <p class="text_card">Provides a consistent approach to data access – relational, non-relational,
-                        map-reduce, and beyond.</p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="img_container_card">
-                    <img src="./media/spring-cloud.svg" class="card_image" />
-                </div>
-                <div class="text_container_card">
-                    <h2 class="header_card">Spring Cloud</h2>
-                    <p class="text_card">Provides a set of tools for common patterns in distributed systems. Useful for
-                        building and deploying microservices.</p>
-                </div>
-            </div>
-        </div>
-        <div class="card_row">
-            <div class="card">
-                <div class="img_container_card">
-                    <img src="./media/spring-data-flow.svg" class="card_image" />
-                </div>
-                <div class="text_container_card">
-                    <h2 class="header_card">Spring Cloud Data Flow</h2>
-                    <p class="text_card">Provides an orchestration service for composable data microservice applications
-                        on modern runtimes.</p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="img_container_card">
-                    <img src="./media/spring-security.svg" class="card_image" />
-                </div>
-                <div class="text_container_card">
-                    <h2 class="header_card">Spring Security</h2>
-                    <p class="text_card">Protects your application with comprehensive and extensible authentication and
-                        authorization support.</p>
-                </div>
-            </div>
-        </div>
+    <div class="card_container" id="card_container">
     </div>
 </body>
 

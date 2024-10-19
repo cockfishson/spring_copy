@@ -254,6 +254,10 @@ body {
     font-weight: 200;
 }
 
+.sidebar_menu {
+    display: none;
+}
+
 @media (max-width: 1200px) {
     .header_menu {
         justify-content: center;
@@ -272,11 +276,33 @@ body {
 
 @media (max-width: 1020px) {
     .main_item {
+        display: block;
+        background-color: #191E1E;
+        width: 80vw;
+        padding: 0;
+        z-index: 101;
+    }
+
+    .menu_txt {
+        display: block;
+        width: 100%;
+        position: static;
+        z-index: 101;
+        flex-direction: column;
+    }
+
+    .dropdown_menu {
         display: none;
+    }
+
+    .sub_txt {
+        position: static;
+        z-index: 101;
     }
 
     .hamburger {
         display: flex;
+        z-index: 150;
     }
 
     .logo_wrap {
@@ -306,6 +332,73 @@ body {
         width: 75%;
         margin-left: 12.5%;
         justify-content: space-between;
+    }
+
+    .sidebar_menu {
+        display: none;
+        flex-direction: column;
+        height: 85vh;
+        width: 90vw;
+        position: fixed;
+        background-color: #191E1E;
+        transition: left 0.3s ease;
+        z-index: 100;
+        margin: 0;
+        padding: 7.5vh 5vw 7.5vh 5vw;
+        list-style-type: none;
+        overflow-y: scroll;
+    }
+
+    .menu_txt_side {
+        border-bottom: 1px solid #EBF2F2;
+        padding-bottom: 10px;
+        color: #EBF2F2;
+        font-size: 2rem;
+        font-weight: 500;
+        width: 80%;
+        margin-bottom: 0%;
+    }
+
+    .menu_txt_side:hover {
+        cursor: pointer;
+        color: #6CB52D;
+    }
+
+    .menu_txt_side::after {
+        content: '›';
+        position: absolute;
+        right: 20%;
+        transform: rotate(90deg);
+        transition: transform 0.3s ease;
+        font-size: 2rem;
+        color: #EBF2F2;
+        font-weight: 300;
+    }
+
+    .rotate-180::after {
+        transform: rotate(-90deg);
+    }
+
+    #DEVELOPMENT_tools {
+        color: #98afae;
+        font-size: 1.2rem;
+        padding-left: 0;
+        padding-bottom: 0;
+        padding-top: 2rem;
+    }
+
+    .submenu_side {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: none;
+    }
+
+    .sub_txt_side {
+        color: #98afae;
+        font-size: 1.2rem;
+        padding: 0.5rem 0;
+        margin: 0;
     }
 
     .card {
