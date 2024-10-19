@@ -39,9 +39,10 @@ const cards_default = [
 
 function Render_cards(cards_for_projects) {
   const card_container = document.getElementById("card_container");
+  card_container.innerHTML = "";
 
   cards_for_projects.map((card, index) => {
-    if (index % 2 == 0) {
+    if (index % 2 === 0) {
       const card_row = document.createElement("div");
       card_row.className = "card_row";
       card_container.appendChild(card_row);
@@ -50,15 +51,14 @@ function Render_cards(cards_for_projects) {
     const card_div = document.createElement("div");
     card_div.className = "card";
     card_div.innerHTML = `
-        <div class="img_container_card">
-                    <img src="${card.imgSrc}" class="card_image" />
-                </div>
-                <div class="text_container_card">
-                    <h2 class="header_card">${card.title}</h2>
-                    <p class="text_card">${card.description}</p>
-                </div>
-        </div>
-  `;
+      <div class="img_container_card">
+        <img src="${card.imgSrc}" class="card_image" />
+      </div>
+      <div class="text_container_card">
+        <h2 class="header_card">${card.title}</h2>
+        <p class="text_card">${card.description}</p>
+      </div>
+    `;
     previous_row.appendChild(card_div);
   });
 }
@@ -167,14 +167,17 @@ function Render_nav_bar(element_name) {
 let isBurgerOpen = false;
 
 function toggleBurgerMenu() {
+  const sidebar_menu = document.getElementById("sidebar_menu");
+  const hamburger = document.getElementById("hamburger");
+
   if (isBurgerOpen) {
-    document.getElementById("sidebar_menu").style.display = "none";
-    document.getElementById("hamburger").style.position = "static";
+    sidebar_menu.style.display = "none";
+    hamburger.style.position = "static";
     isBurgerOpen = false;
   } else {
-    document.getElementById("sidebar_menu").style.display = "flex";
-    document.getElementById("hamburger").style.position = "fixed";
-    document.getElementById("hamburger").style.right = "0";
+    sidebar_menu.style.display = "flex";
+    hamburger.style.position = "fixed";
+    hamburger.style.right = "0";
     isBurgerOpen = true;
   }
 }
@@ -217,10 +220,36 @@ function Render_nav_side(element_name) {
   });
 }
 
+let searchTimeout;
+
+function Search_for(query) {
+  query = query.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, "");
+  if (query.length < 2) {
+    Render_cards(cards_default);
+    return;
+  }
+  const resulting_data_set = cards_default.filter((element) => {
+    return (
+      element.title.toLowerCase().includes(query) ||
+      element.description.toLowerCase().includes(query)
+    );
+  });
+
+  resulting_data_set.length < 1
+    ? (document.getElementById("card_container").innerHTML =
+        "<h1>Invalid input, no data found!</h1>")
+    : Render_cards(resulting_data_set);
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   Render_cards(cards_default);
   Render_nav_bar("dropdown_menu");
   Render_nav_side("sidebar_menu");
-});
 
-document.addEventListener;
+  const search = document.getElementById("search_bar");
+  search.addEventListener("input", (event) => {
+    clearTimeout(searchTimeout);
+    const search_target = event.target.value;
+    searchTimeout = setTimeout(() => Search_for(search_target), 300);
+  });
+});
