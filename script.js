@@ -1,5 +1,5 @@
-import { CARDS_DEFAULT } from "./card_content";
-import { MENU_CONTENT } from "./header_content";
+import { CARDS_DEFAULT } from "./card_content.js";
+import { MENU_CONTENT } from "./header_content.js";
 function Render_cards(cards_for_projects) {
   const card_container = document.getElementById("card_container");
   card_container.innerHTML = "";
@@ -151,7 +151,6 @@ document.addEventListener("DOMContentLoaded", () => {
   Render_cards(CARDS_DEFAULT);
   Render_nav_bar("dropdown_menu");
   Render_nav_side("sidebar_menu");
-
   const search = document.getElementById("search_bar");
   search.addEventListener("input", (event) => {
     clearTimeout(searchTimeout);
