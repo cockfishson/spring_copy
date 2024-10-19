@@ -1,42 +1,5 @@
-const cards_default = [
-  {
-    imgSrc: "./media/spring-boot.svg",
-    title: "Spring Boot",
-    description:
-      "Takes an opinionated view of building Spring applications and gets you up and running as quickly as possible.",
-  },
-  {
-    imgSrc: "./media/spring-framework.svg",
-    title: "Spring Framework",
-    description:
-      "Provides core support for dependency injection, transaction management, web apps, data access, messaging, and more.",
-  },
-  {
-    imgSrc: "./media/spring-data.svg",
-    title: "Spring Data",
-    description:
-      "Provides a consistent approach to data access – relational, non-relational, map-reduce, and beyond.",
-  },
-  {
-    imgSrc: "./media/spring-cloud.svg",
-    title: "Spring Cloud",
-    description:
-      "Provides a set of tools for common patterns in distributed systems. Useful for building and deploying microservices.",
-  },
-  {
-    imgSrc: "./media/spring-data-flow.svg",
-    title: "Spring Cloud Data Flow",
-    description:
-      "Provides an orchestration service for composable data microservice applications on modern runtimes.",
-  },
-  {
-    imgSrc: "./media/spring-security.svg",
-    title: "Spring Security",
-    description:
-      "Protects your application with comprehensive and extensible authentication and authorization support.",
-  },
-];
-
+import { CARDS_DEFAULT } from "./card_content";
+import { MENU_CONTENT } from "./header_content";
 function Render_cards(cards_for_projects) {
   const card_container = document.getElementById("card_container");
   card_container.innerHTML = "";
@@ -63,66 +26,9 @@ function Render_cards(cards_for_projects) {
   });
 }
 
-const menu_content = [
-  {
-    main: "Why Spring",
-    subs: [
-      "Overview",
-      "Microservices",
-      "Reactive",
-      "Event Driven",
-      "Cloud",
-      "Web Applications",
-      "Serverless",
-      "Batch",
-    ],
-  },
-  {
-    main: "Learn",
-    subs: ["Overview", "Quickstart", "Guides", "Blog"],
-  },
-  {
-    main: "Projects",
-    subs: [
-      "Overview",
-      "Spring Boot",
-      "Spring Framework",
-      "Spring Cloud",
-      "Spring Cloud Data Flow",
-      "Spring Data",
-      "Spring Integration",
-      "Spring Batch",
-      "Spring Security",
-      "Spring AI",
-      "View all projects",
-      "DEVELOPMENT TOOLS",
-      "Spring Tools 4",
-      "Spring Initializr",
-    ],
-  },
-  {
-    main: "Academy",
-    subs: ["Courses", "Get Certified"],
-  },
-  {
-    main: "Solutions",
-    subs: [
-      "Overview",
-      "Tanzu Spring",
-      "Spring Consulting",
-      "Spring Academy For Teams",
-      "Security Advisories",
-    ],
-  },
-  {
-    main: "Community",
-    subs: ["Overview", "Events", "Authors"],
-  },
-];
-
 function Render_nav_bar(element_name) {
   const dropdown_container = document.getElementById(element_name);
-  menu_content.map((mainmenu) => {
+  MENU_CONTENT.map((mainmenu) => {
     const menu_item = document.createElement("li");
     menu_item.className = "main_item";
     let submenu_html = `<p class="menu_txt">${mainmenu.main}</p><ul class="submenu">`;
@@ -184,7 +90,7 @@ function toggleBurgerMenu() {
 
 function Render_nav_side(element_name) {
   const dropdown_container = document.getElementById(element_name);
-  menu_content.map((mainmenu) => {
+  MENU_CONTENT.map((mainmenu) => {
     const menu_item = document.createElement("li");
     menu_item.className = "main_item_side";
     let submenu_html = `<p class="menu_txt_side">${mainmenu.main}</p><ul class="submenu_side">`;
@@ -225,10 +131,10 @@ let searchTimeout;
 function Search_for(query) {
   query = query.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, "");
   if (query.length < 2) {
-    Render_cards(cards_default);
+    Render_cards(CARDS_DEFAULT);
     return;
   }
-  const resulting_data_set = cards_default.filter((element) => {
+  const resulting_data_set = CARDS_DEFAULT.filter((element) => {
     return (
       element.title.toLowerCase().includes(query) ||
       element.description.toLowerCase().includes(query)
@@ -242,7 +148,7 @@ function Search_for(query) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  Render_cards(cards_default);
+  Render_cards(CARDS_DEFAULT);
   Render_nav_bar("dropdown_menu");
   Render_nav_side("sidebar_menu");
 
