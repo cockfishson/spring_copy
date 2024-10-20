@@ -1,5 +1,6 @@
 import { CARDS_DEFAULT } from "./card_content.js";
 import { MENU_CONTENT } from "./header_content.js";
+
 function Render_cards(cards_for_projects) {
   const card_container = document.getElementById("card_container");
   card_container.innerHTML = "";
