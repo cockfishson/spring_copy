@@ -390,6 +390,10 @@ body {
         display: none;
     }
 
+    submenu_side:hover {
+        color: #6CB52D;
+    }
+
     .sub_txt_side {
         color: #98afae;
         font-size: 1.2rem;
